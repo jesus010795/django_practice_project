@@ -4,28 +4,49 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse('hello world')
+    return render(
+        request, 
+        template_name='core/home.html'
+        )
 
 
 def about(request):
-    return HttpResponse('about page')
+    return render(
+        request, 
+        template_name='core/about.html'
+        )
 
 
 def services(request):
-    return HttpResponse('services page')
+    return render(
+        request, 
+        template_name='core/services.html'
+        )
 
 
 def store(request):
-    return HttpResponse('store pages')
+    return render(
+        request, 
+        template_name='core/store.html'
+        )
 
 
 def contact(request):
-    return HttpResponse('contact page')
+    return render(
+        request, 
+        template_name='core/contact.html'
+        )
 
 
 def blog(request):
-    return HttpResponse('blog page')
+    return render(
+        request, 
+        template_name='core/blog.html'
+        )
 
 
 def sample(request):
-    return HttpResponse('sample page')
+    return render(
+        request, 
+        template_name='core/sample.html'
+        )
