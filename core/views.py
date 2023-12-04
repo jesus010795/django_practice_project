@@ -17,13 +17,6 @@ def about(request):
         )
 
 
-def services(request):
-    return render(
-        request, 
-        template_name='core/services.html'
-        )
-
-
 def store(request):
     return render(
         request, 
