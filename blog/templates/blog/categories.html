@@ -5,8 +5,8 @@
 {% block title %}Blog{% endblock %}
 
 {% block content %}
-  {% if posts %}
-    {% for post in posts %}
+  {% if category %}
+    {% for post in category.post_set.all %}
       <section class="page-section cta">
         <div class="container">
           <div class="row">
@@ -23,7 +23,7 @@
                   {{ post.content|linebreaks }}
                 </p>
                 <p class="mb-0 mbt">
-                  <span class="section-heading-under">Publicado por <em><b>{{ post.author }}</b></em>en
+                  <span class="section-heading-under">Publicado por<b>{{ post.author }}</b>en
                     {% for category in post.categories.all %}
                       <a href="{% url 'category' category.id %}" class="link">{{category}}</a>{% if not forloop.last %},{% endif %} 
                     {% endfor %}
