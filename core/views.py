@@ -29,10 +29,3 @@ def contact(request):
         request, 
         template_name='core/contact.html'
         )
-
-
-def sample(request):
-    return render(
-        request, 
-        template_name='core/sample.html'
-        )
